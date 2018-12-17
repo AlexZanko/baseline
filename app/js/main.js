@@ -49,7 +49,7 @@ let validateStep = (moveFunction,inputContainer = '.tab-block-stepform .step-blo
         let containerInputs = container.querySelectorAll('input');
         let validation = [...containerInputs].forEach(i => {
           if(validate.hasError(i)){
-            validate.showError(i,'Это поле обязательное для заполенения');
+            validate.showError(i,'Это поле обязательное для заполнения');
           }
         })
         if(![...containerInputs].some(i => validate.hasError(i))){
