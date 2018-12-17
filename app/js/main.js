@@ -123,9 +123,13 @@ let passwordRepeatChecker = (groupingSelector) => {
     });
   }
   let passwordCheckEvent = (parent, child) => {
+    parent.addEventListener('keyup', function(e) {
+      child.setAttribute('pattern',this.value);
+    })
     child.addEventListener('keyup', function(e) {
       if(this.value !== parent.value){
         validate.showError(child,'Пароли не совпадают');
+
       } else {
         validate.removeError(child);
       }
