@@ -157,7 +157,11 @@ copyValue('input[name="user-tel"]','.tel-field-val')
 let phoneMask = (phoneinput,format) => {
   let phoneInput = document.querySelectorAll(phoneinput);
   [...phoneInput].forEach(i => {
-
+    i.addEventListener('focus', function (e) {
+      if (this.value.length < format.length) {
+        this.value = format;
+      }
+    });
     i.addEventListener('keyup', function(e){
       if(this.value.length < format.length){
         this.value = format;
