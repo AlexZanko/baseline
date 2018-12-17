@@ -1,0 +1,13 @@
+.webp{
+  & .tab-block-imagestack__item{
+    &--first{
+      background-image: url('assets/img/backgrounds/first-screen.webp');
+    }
+    &--second{
+      background-image: url('assets/img/backgrounds/second-screen.webp');
+    }
+    &--third{
+      background-image: url('assets/img/backgrounds/third-screen.webp');
+    }
+  }
+}

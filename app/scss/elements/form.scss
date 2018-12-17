@@ -1,0 +1,223 @@
+.error-mark{
+  @extend .svg-icons--danger;
+  @extend .svg-icons--danger-dims;
+}
+.main-input {
+  height: 40px;
+  @extend .d-flex;
+  align-items: center;
+  padding-left: 1rem;
+  width:100%;
+  border:2px solid transparent;
+  outline: transparent;
+
+  &--maincolor{
+    background-color: $colorMainAccentLight;
+    &:focus{
+      border-color:$colorMain;
+    }
+  }
+  &--secondarycolor{
+    background-color: $colorSecondary;
+    &:focus{
+      border-color:$colorSecondaryAccent;
+    }
+  }
+  &--thirdcolor{
+    background-color: $colorMainThirdAccent;
+    &:focus{
+      border-color:$colorMainThird;
+    }
+  }
+  &.error{
+    border-color:$colorError;
+    & ~ .main-input-error{
+      &-icon{
+        position: absolute;
+        @extend .error-mark;
+        top:50%;
+        transform:translateY(-50%);
+        right:-42px;
+      }
+    }
+  }
+  &__label{
+    position: relative;
+    display: block;
+    width: 100%;
+    &-text{
+      display: block;
+      position: absolute;
+      font-size: 1rem;
+      color:$colorMainGreyLight;
+      opacity: 0;
+      @supports not (-ms-ime-align:auto) {
+        top:calc(50% - .5rem);
+        left:1rem;
+        opacity: 1;
+      }
+      z-index: 3;
+      transition: $transitionDefault;
+    }
+  }
+
+  &::placeholder{
+    opacity:0;
+  }
+  &:not(:placeholder-shown) ~ .main-input__label-text{
+    opacity: 0;
+    font-size: $fontSmall ;
+    top: 4px;
+  }
+  &:focus{
+    font-style: italic;
+
+
+    &:placeholder-shown{
+      & ~ .main-input__label-text{
+        font-size: $fontSmall ;
+        top: 4px;
+      }
+    }
+
+  }
+}
+.main-input-radio{
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  &:checked + &__label-helper{
+    &:after{
+      opacity: 1;
+    }
+  }
+  &__label{
+    @extend .d-flex;
+    position: relative;
+    &-helper{
+      position: absolute;
+      top:0;
+      left:0;
+      pointer-events: none;
+      width:24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $colorMainGrey;
+      &:after{
+        content:'';
+        width: 16px;
+        height:16px;
+        border-radius: 50%;
+        position: absolute;
+        left:50%;
+        top:50%;
+        opacity: 0;
+        transform:translate(-50%,-50%);
+        transition:$transitionDefault;
+        background-color: $colorMainAccentLight;
+      }
+    }
+    &text{
+      display: block;
+      padding-left: 16px;
+      color:$colorMainGreyLight;
+    }
+  }
+
+}
+.main-input-checkbox{
+  width: 16px;
+  height: 16px;
+  position: relative;
+  &:checked ~ &__helper{
+    &:before{
+      opacity: 1;
+
+    }
+  }
+  &__label{
+    @extend .d-flex;
+    @extend .d-flex--center;
+    padding-bottom: 24px;
+    position: relative;
+    &-text{
+      padding-left: 1rem;
+    }
+
+    &  ~ .error-message{
+      bottom:0.35rem;
+    }
+  }
+  &.error ~  .main-input-error-icon {
+    @extend .svg-icons--danger;
+    @extend .svg-icons--danger-dims;
+    position: absolute;
+    right:-45px;
+    top:-18px;
+  }
+  &__helper{
+    &:after,&:before{
+      content:'';
+      position: absolute;
+      pointer-events: none;
+
+    }
+    &:after{
+      content:'';
+      left:0;
+      top:0;
+      background-color: $colorMainGrey;
+      width: 17px;
+      height: 17px;
+
+    }
+    &:before{
+      @extend .svg-icons--check;
+      @extend .svg-icons--check-dims;
+      left:-9px;
+      top:-7px;
+      opacity: 0;
+      z-index: 2;
+    }
+
+  }
+
+}
+.main-input-reset{
+  background-color: transparent;
+  border:none;
+  outline: none;
+  cursor: pointer;
+}
+.form-row{
+  @extend .d-flex;
+  width: 100%;
+
+  position: relative;
+  &--spaced{
+      justify-content: space-between;
+  }
+  &--center{
+    @extend .d-flex--center;
+  }
+  &__col {
+    width: 50%;
+    & label{
+      @extend .d-flex;
+      @extend .d-flex--a-center;
+    }
+  }
+}
+// VALIDATION
+.error-message{
+  color:$colorError;
+  font-size: .75rem;
+  position: absolute;
+  left:0;
+  bottom:-.85rem;
+  width:100%;
+  &:after{
+    content:''
+
+  }
+}

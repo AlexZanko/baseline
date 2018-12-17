@@ -1,0 +1,25 @@
+{
+  "name": "baseline-test-project",
+  "version": "1.0.0",
+  "description": "this is the test baseline company's project for job candidates",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alexZankovich",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-util": "^3.0.8",
+    "gulp-webp": "^3.0.0"
+  }
+}

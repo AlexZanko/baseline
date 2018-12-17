@@ -1,0 +1,283 @@
+.tab-block{
+  width:99%;
+  @include breakpoint(tablet){
+    width:100%;
+  }
+  position: relative;
+  &--decored{
+    &:after{
+      content:'';
+      position: absolute;
+      left:-42px;
+      top:-58px;
+      @extend .svg-icons--logo;
+      @extend .svg-icons--logo-dims;
+      z-index: 3;
+    }
+
+  }
+  &-step{
+    & .tab-block--bordered{
+      border-style: solid;
+      border-width: 2px;
+    }
+    &-0{
+      & .tab-block--bordered{
+          border-color:$colorMain;
+      }
+      & .tab-block-navigation-list__item{
+        border-color:$colorMain
+      }
+    }
+    &-1{
+      & .tab-block--bordered{
+          border-color:$colorSecondary;
+      }
+      & .tab-block-navigation-list__item{
+        border-color:$colorSecondary;
+      }
+    }
+    &-2{
+      & .tab-block--bordered{
+          border-color:$colorMainThird;
+      }
+      & .tab-block-navigation-list__item{
+        border-color:$colorMainThird;
+      }
+    }
+  }
+  &--bordered{
+
+    &-0{
+      border-color:  $colorMain;
+      & .tab-block-navigation-list__item{
+        border-color:$colorMain
+      }
+    }
+    &-1{
+      border-color:  $colorSecondary;
+      & .tab-block-navigation-list__item{
+        border-color:$colorSecondary;
+      }
+    }
+    &-2{
+      border-color:  $colorMainThird;
+      & .tab-block-navigation-list__item{
+        border-color:$colorMainThird;
+      }
+    }
+    border-bottom-right-radius:  55px;
+
+  }
+  &-content{
+    width:100%;
+    @extend .d-flex;
+    &-area{
+      width:100%;
+
+      @include breakpoint(onlytablet){
+          min-height: 100vh;
+        &:first-of-type{
+          display: none;
+        }
+      }
+      @include breakpoint(tablet){
+        width:50%;
+        height:80vh;
+      }
+
+
+      @extend .d-flex;
+      @extend .d-flex--column;
+      &__formarea{
+        background-color: $colorMainWhite;
+        border-bottom-right-radius: 55px;
+        height: 100%;
+      }
+      
+      &__attemp{
+        color:$colorError;
+        position: absolute;
+        top: 0;
+        right: -16px;
+        transform-origin: 100% 50%;
+        transform: rotate(-270deg) translateX(97%);
+
+      }
+    }
+    &-navigation {
+
+    }
+  }
+  &-imagestack{
+    height: 100%;
+    border-top-left-radius: 55px;
+    overflow: hidden;
+    position: relative;
+    &__item{
+      width:100%;
+      height:100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      position: absolute;
+      left:0;
+      top:0;
+      transition: .35s ease-in-out;
+      &.active{
+        opacity: 1;
+      }
+      &-label{
+        color:$colorMainWhite;
+        font-size: 2rem;
+        font-weight: 800;
+        width: 100%;
+        padding:15.25%;
+        text-align: center;
+      }
+      &--first {
+
+        background-image: url('assets/img/backgrounds/first-screen.jpg');
+      }
+      &--second{
+
+        background-image: url('assets/img/backgrounds/second-screen.jpg');
+      }
+      &--third{
+
+        background-image: url('assets/img/backgrounds/third-screen.jpg');
+      }
+    }
+  }
+  // tab NAVIGATION
+  &-navigation{
+    position: absolute;
+    bottom:calc(100% - 2px);
+    right:calc(15.2%  - 16px);
+    z-index: 2;
+    @include breakpoint(onlytablet){
+      right: 0;
+      width: 100%;
+    }
+    &-list{
+      @extend .reset-list;
+      @extend .d-flex;
+      margin: 0;
+      @include breakpoint(onlytablet){
+        justify-content: center;
+      }
+      &__item{
+        font-size: 1.422rem;
+        padding: 2px 28px;
+        margin:0 5px;
+        border-width: 1px;
+        border-bottom-width: 0px;
+        border-color:$colorMain;
+        border-style: solid;
+        border-bottom-color: transparent;
+        cursor: pointer;
+        @extend .d-flex;
+        @extend .d-flex--center;
+        pointer-events: none;
+        @include breakpoint(tablet){
+          margin: 0 16px;
+        }
+        &.active{
+          border-width: 2px;
+          padding-bottom: 1px;
+          border-bottom-width: 3px;
+
+          border-bottom-color: $colorMainWhite;
+          pointer-events: all;
+        }
+        & a {
+          text-decoration: none;
+          color:inherit;
+        }
+      }
+
+    }
+  }
+  &-stepform{
+    height: 100%;
+    padding-right:20px;
+    padding-left: 20px;
+    @extend .d-flex--column;
+    @extend .d-flex;
+    @extend .d-flex--center;
+    @include breakpoint(tablet){
+      padding-right:12.2%;
+      padding-left: 20.8%;
+    }
+    &__inner{
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    & form{
+      height:100%;
+      width:100%;
+      @extend .d-flex--column;
+      @extend .d-flex;
+      @extend .d-flex--center;
+      position: absolute;
+      left:0;
+      top:0;
+      z-index: 1;
+    }
+    &__main-btn{
+      margin-bottom: 8px;
+    }
+    &__main-input{
+      &--marginsmall{
+        margin-bottom: 16px;
+      }
+      &--marginmedium{
+        margin-bottom: 24px;
+      }
+      &--marginlarge{
+        margin-bottom: 32px;
+      }
+      &--marginultralarge{
+        margin-bottom: 48px;
+      }
+    }
+    &__step{
+      height: 0%;
+      opacity: 0;
+      @extend .d-flex;
+      @extend .d-flex--center;
+      pointer-events: none;
+      overflow: hidden;
+      visibility: hidden;
+      width:0;
+      transition: all .34s .15s ease-in-out,visibility 0s 0s ;
+      &.active{
+        height:auto;
+        visibility: visible;
+        overflow: visible;
+        opacity: 1;
+        width: 100%;
+        pointer-events: all;
+        transition: all .34s .1s ease-in-out,visibility 0s 0s ;
+      }
+    }
+    &-desc{
+      &__main{
+        font-size: 1.5rem;
+        padding-bottom: 8px;
+      }
+      &__second{
+        padding-bottom: 40px;
+      }
+
+      text-align: center;
+    }
+  }
+  // STEPFORM
+
+}
+.password-group{
+  width:100%;
+}

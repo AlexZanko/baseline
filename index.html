@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Baseline</title>
+  <script src="app/js/modernizr.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
+</head>
+<body>
+  <button class="mystery-btn"></button>
+  <div class="screen-block">
+    <!-- TAB CONTAINER -->
+    <div class="tab-block tab-block--decored step-container tab-block-step tab-block-step-0">
+      <!-- TAB CONTAINER -->
+      <div class="tab-block-navigation">
+        <nav>
+
+        </nav>
+      </div>
+      <!-- END NAVIGATION -->
+      <!-- TAB-CONTENT -->
+      <div class="tab-block-content">
+        <div class="tab-block-content-area">
+          <div class="tab-block-imagestack">
+            <div class="tab-block-imagestack__item tab-block-imagestack__item--first step-block active" data-step="1">
+                <div class="tab-block-imagestack__item-label">Всего три простых шага <br>для получения бонусов!</div>
+            </div>
+          <div class="tab-block-imagestack__item tab-block-imagestack__item--second step-block" data-step="2">
+                <div class="tab-block-imagestack__item-label">Половина пути <br>уже пройдена</div>
+            </div>
+            <div class="tab-block-imagestack__item tab-block-imagestack__item--third step-block" data-step="3" >
+                <div class="tab-block-imagestack__item-label">Осталось совсем <br>чуть-чуть</div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-block-content-area tab-block--bordered">
+            <div class="tab-block-content-area__formarea">
+
+              <div class="tab-block-content-area__attemp">Все поля обязательны для заполнения</div>
+              <!-- FORM WINDOW -->
+              <div class="tab-block-stepform">
+                <div class="tab-block-stepform__inner">
+                <form action="#" class="main-form" data-validate>
+                  <div class="tab-block-stepform__step tab-block-stepform__step step-block active" data-step="1">
+                    <label class="main-input__label tab-block-stepform__main-input--marginlarge">
+
+                      <input type="text"  pattern="[a-zA-ZА-Яа-яёЁ-]{0,15}" name="user_sn" class="main-input main-input--maincolor " placeholder="Фамилия" required>
+                      <span class="main-input__label-text">Фамилия</span>
+                      <div class="main-input-error-icon"></div>
+                    </label>
+                    <label class="main-input__label tab-block-stepform__main-input--marginlarge">
+                      <input type="text" pattern="[a-zA-ZА-Яа-яёЁ]{0,15}" name="user_fn" class="main-input main-input--maincolor " placeholder="Имя" pattern=[a-zA-ZА-Яа-яё] required>
+                      <span class="main-input__label-text">Имя</span>
+                      <div class="main-input-error-icon"></div>
+                    </label>
+                    <label class="main-input__label tab-block-stepform__main-input--marginmedium">
+                      <input type="text" pattern="[a-zA-ZА-Яа-яёЁ]{0,15}" name="user_tn" class="main-input main-input--maincolor " placeholder="Отчество" pattern=[a-zA-ZА-Яа-яё] required>
+                      <span class="main-input__label-text">Отчество</span>
+                      <div class="main-input-error-icon"></div>
+                    </label>
+                    <div class="form-row form-row--spaced tab-block-stepform__main-input--marginmedium">
+                      <div class="form-row__col">
+                      <label class="main-input-radio__label">
+                        <input type="radio" name="user_gender" class="main-input-radio" checked>
+                        <div class="main-input-radio__label-helper"></div>
+                        <div class="main-input-radio__labeltext">Мужчина</div>
+                      </label>
+                      </div>
+                      <div class="form-row__col">
+                      <label class="main-input-radio__label">
+                        <input type="radio" name="user_gender" class="main-input-radio">
+                        <div class="main-input-radio__label-helper"></div>
+                        <div class="main-input-radio__labeltext">Женщина</div>
+                      </label>
+                      </div>
+                    </div>
+                    <label class="main-input__label tab-block-stepform__main-input--marginsmall">
+                      <input type="text" user="user_birthdate" pattern="[0-9\-\.\\]{10}" class="main-input main-input--maincolor " placeholder="Дата рождения" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                      <span class="main-input__label-text">Дата рождения</span>
+                      <div class="main-input-error-icon"></div>
+                    </label>
+                    <div class="form-row form-row--spaced tab-block-stepform__main-input--medium">
+                      <label class="main-input-checkbox__label">
+                        <input type="checkbox" name="user_accepted" class="main-input-checkbox" required>
+                        <span class="main-input-checkbox__helper"></span>
+                        <span class="main-input-checkbox__label-text">Соглашаюсь с <strong>условиями участия</strong></span>
+                        <div class="main-input-error-icon"></div>
+                      </label>
+                    </div>
+                    <button class="main-btn sa main-btn--arrowed main-btn--first-color  tab-block-stepform__main-btn step-event" type="button">
+                      Продолжить
+                    </button>
+                  </div>
+
+                  <div class="tab-block-stepform__step step-block">
+                    <label class="main-input__label  tab-block-stepform__main-input--marginlarge">
+
+                      <input type="tel" pattern="[0-9\+]{13}" name="user-tel" class="main-input main-input--secondarycolor" placeholder="Телефон">
+                      <span class="main-input__label-text">Телефон</span>
+                      <div class="main-input-error-icon"></div>
+                    </label>
+                    <label class="main-input__label  tab-block-stepform__main-input--marginlarge">
+
+                      <input type="email" class="main-input main-input--secondarycolor" placeholder="Email" >
+                      <span class="main-input__label-text">Email</span>
+                      <div class="main-input-error-icon"></div>
+                    </label>
+                    <div class="password-group">
+                    <label class="main-input__label tab-block-stepform__main-input--marginlarge">
+
+                      <input type="password"  pattern="[a-zA-ZА-Яа-яёЁ0-9\!\*]{4,25}" name="user-password" class="main-input main-input--secondarycolor  password-parent" placeholder="Пароль">
+                      <span class="main-input__label-text">Пароль</span>
+                      <div class="main-input-error-icon"></div>
+                    </label>
+
+                    <label class="main-input__label tab-block-stepform__main-input--marginultralarge">
+
+                      <input type="password"  pattern="[a-zA-ZА-Яа-яёЁ0-9\!\*]{4,25}" name="user-password-confirm"  class="main-input main-input--secondarycolor password-child" placeholder="Повторить пароль" >
+                      <span class="main-input__label-text">Повторить пароль</span>
+
+                      <div class="main-input-error-icon"></div>
+                    </label>
+                    </div>
+                    <button class="main-btn main-btn--arrowed  main-btn--second-color tab-block-stepform__main-btn ">
+                      Продолжить
+                    </button>
+                  </div>
+                </form>
+                  <!-- STEP 3 -->
+
+                  <div class="tab-block-stepform__step step-block">
+                    <form action="final" data-validate>
+                    <div class="tab-block-stepform-desc">
+                      <div class="tab-block-stepform-desc__main">
+                        На номер <b class="tel-field-val"></b><br>
+                        отправлен код подтверждения
+                      </div>
+                      <div class="tab-block-stepform-desc__second">
+                        Введите его в поле ниже:
+                      </div>
+                    </div>
+                    <label class="main-input__label  tab-block-stepform__main-input--marginmedium">
+
+                      <input type="text" pattern="[0-9]{12}" class="main-input main-input--thirdcolor" placeholder="Код">
+                      <span class="main-input__label-text">Код</span>
+                    </label>
+
+                    <button class="main-btn  main-btn--third-color tab-block-stepform__main-btn">
+                      Присоединиться
+                    </button>
+                    <div class="form-row form-row--center"><input type="reset" value="Отправить код еще раз" class="main-input-reset"></div>
+                    </form>
+                  </div>
+                  </div>
+              </div>
+              <!-- FORM WINDOW END -->
+            </div>
+        </div>
+      </div>
+      <!-- END -->
+    </div>
+    <!-- END -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/validate@2/dist/validate.min.js"></script>
+  <script src="app/js/main.babel.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+html,body{
+  font-size: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.d-flex{
+  display: flex;
+  flex-wrap:wrap;
+  &--center{
+    justify-content: center;
+    align-items: center;
+  }
+  &--column {
+    flex-direction: column;
+  }
+  &--a-center{
+    align-items: center;
+  }
+}
+.fw{
+  width:100%;
+}
+.fh{
+  height: 100vh;
+}
+
+.reset-list{
+  padding-left: 0;
+  list-style-type: none;
+}

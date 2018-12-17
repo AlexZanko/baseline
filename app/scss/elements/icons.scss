@@ -1,0 +1,63 @@
+%svg-common {
+	background: url("assets/img/sprites/sprite.view.svg") no-repeat;
+}
+
+.svg-icons--arrow {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-icons--arrow-dims {
+	width: 93px;
+	height: 28px;
+}
+
+.svg-icons--burger {
+	@extend %svg-common;
+	background-position: 78.3068783068783% 27.45098039215686%;
+}
+
+.svg-icons--burger-dims {
+	width: 52px;
+	height: 46px;
+}
+
+.svg-icons--check {
+	@extend %svg-common;
+	background-position: 96.61835748792271% 23.728813559322035%;
+}
+
+.svg-icons--check-dims {
+	width: 34px;
+	height: 30px;
+}
+
+.svg-icons--danger {
+	@extend %svg-common;
+	background-position: 78.3068783068783% 77.08333333333333%;
+}
+
+.svg-icons--danger-dims {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-icons--logo {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-icons--logo-dims {
+	width: 148px;
+	height: 148px;
+}
+
+.svg-sprites--sprite.symbol {
+	@extend %svg-common;
+	background-position: 90.49773755656109% 57.8125%;
+}
+
+.svg-sprites--sprite.symbol-dims {
+	width: 20px;
+	height: 20px;
+}
