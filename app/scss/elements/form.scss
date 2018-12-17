@@ -126,9 +126,10 @@
 
 }
 .main-input-checkbox{
-  width: 16px;
-  height: 16px;
+  width: 0;
+  height: 0;
   position: relative;
+  opacity: 0;
   &:checked ~ &__helper{
     &:before{
       opacity: 1;
@@ -142,6 +143,7 @@
     position: relative;
     &-text{
       padding-left: 1rem;
+      margin-left: 1rem;
     }
 
     &  ~ .error-message{
